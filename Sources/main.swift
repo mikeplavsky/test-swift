@@ -10,3 +10,13 @@ let i2 = Int(Process.arguments[2])!
 print(
     x(i1)(i2)
 )
+
+func m1(t: [Int], f: (Int)->()){
+    for x in t {
+        f(x)
+    }
+}
+
+m1([1,2,3,4]) { x in
+    print("Got: \(x)")
+}
